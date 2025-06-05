@@ -12,12 +12,11 @@ from models import *
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('pantalla_carga.html')
 
 @app.route('/posadas')
 def posadas():
-    lista = Posada.query.all()
-    return render_template('posadas.html', posadas=lista)
+    return render_template('posadas.html')
 
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
@@ -79,6 +78,19 @@ def reservas():
         return redirect(url_for('reservas'))
     habitaciones = Habitacion.query.filter_by(Disponibilidad=True).all()
     return render_template('reservas.html', habitaciones=habitaciones)
+
+@app.route('/nosotros')
+def nosotros():
+    return render_template('nosotros.html')
+
+@app.route('/preguntas_frecuentes')
+def preguntas_frecuentes():
+    return render_template('preguntas_frecuentes.html')
+
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
