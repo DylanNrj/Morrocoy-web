@@ -1,11 +1,19 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="es">
 
-{% block title %}Inicio | Reservas Morrocoy{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PosadaYA - Cargando...</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/playa.png" />
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
 
-{% block content %}
-<div class="text-center">
-    <h1 class="display-4">Bienvenido a Reservas Morrocoy</h1>
-    <p class="lead">Explora nuestras posadas disponibles y haz tu reserva en segundos.</p>
-    <a href="{{ url_for('posadas') }}" class="btn btn-primary btn-lg mt-3">Ver Posadas</a>
+<div class="page-pantalla-carga">
+    <div class="loader"></div>
+    <div class="cargando">
+        Cargando<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+    </div>
 </div>
-{% endblock %}
+
+</html>

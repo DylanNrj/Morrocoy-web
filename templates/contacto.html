@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
      <meta charset="utf-8">
-    <title>Nosotros</title>
+    <title>PosadaYA - Contacto</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="icon" type="image/x-icon" href="../static/img/playa.png" />  
      <!-- Google Web Fonts -->
@@ -15,6 +15,34 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../static/css/styles.css" rel="stylesheet">
 </head>
+
+<body class="no-scroll-nosotros">
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+        <a href="{{ url_for('inicio') }}" class="navbar-brand">
+            <h1 class="m-2">
+                <span>Posada</span><span style="color: #7AB730;">YA</span>
+            </h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+            <div class="navbar-nav ml-auto py-0">
+
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('inicio') }}">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('nosotros') }}">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('opiniones') }}">Opiniones</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="{{ url_for('contacto') }}">Contacto</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
   <!-- Contact Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">

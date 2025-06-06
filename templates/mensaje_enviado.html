@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PosadaYa - Enviar</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/playa.png" /> 
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+        :root {
+    --verde-principal: #7AB730;   /* Verde menta que usas en botones y títulos */
+    --verde-hover: #689E5E;       /* Tono más oscuro para hover */
+    --verde-check: #4CAF50;       /* Verde más vibrante para íconos tipo ✔ */
+    --texto-gris: #333333;
+    --gris-fondo: #F4F6F7;
+    --blanco: #FFFFFF;
+}
+    
+        .mensaje-enviado {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--gris-fondo);
+            text-align: center;
+            padding: 20px;
+        }
+    
+        .mensaje-enviado .card {
+            background-color: var(--blanco);
+            border-radius: 15px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+    
+        .mensaje-enviado .card:hover {
+            transform: translateY(-2px);
+        }
+    
+        .mensaje-enviado .icono {
+            font-size: 4rem;
+            color: var(--verde-check); /* icono de check ✔ en tono más vibrante */
+            margin-bottom: 20px;
+        }
+    
+        .mensaje-enviado .card h1 {
+            color: var(--verde-principal);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+    
+        .mensaje-enviado .card p {
+            color: var(--texto-gris);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+    
+        .mensaje-enviado .card .btn {
+            background-color: var(--verde-principal);
+            color: var(--blanco);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        .mensaje-enviado .card .btn:hover {
+            background-color: var(--verde-hover);
+            transform: scale(1.03);
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="mensaje-enviado">
+        <div class="card">
+            <div class="icono">✔</div>
+            <h1>¡Mensaje Enviado!</h1>
+            <p>Los datos han sido enviados correctamente. Pronto nos pondremos en contacto con usted. ¡Gracias por su confianza!</p>
+            <a href="{{ url_for('inicio') }}" class="btn">Volver al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -13,23 +13,30 @@
         <link href="../static/css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+
+
+        
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="{{ url_for('index') }}">PosadaYA</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0" style="color: #ffffff;">
+                        <span style="color: #ffffff;">Posada</span><span style="color: #7AB730;">YA</span>
+                    </h1>
+                </a>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('inicio') }}">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('nosotros') }}">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url_for('preguntas_frecuentes') }}">Preguntas frecuentes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('opiniones') }}">Opiniones</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('contacto') }}">Contacto</a></li>
-                    </ul>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('pantalla_carga') }}">Prueba</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('mensaje_enviado') }}">Prueba2</a></li>
+                    </div>
                 </div>
             </div>
         </nav>
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
